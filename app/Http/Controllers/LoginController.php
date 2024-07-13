@@ -8,16 +8,12 @@ use Illuminate\Support\Facades\Auth;
 class LoginController extends Controller
 {
 
-    public function index()
-    {
-        return view('login.index');
-    }
-
     public function auth(Request $request)
     {
+
         $credenciais = $request->validate([
-            'usuario' => 'required',
-            'senha' => 'required'
+            'usuario' => ['required'],
+            'senha' => ['required']
         ]);
 
 
@@ -28,8 +24,8 @@ class LoginController extends Controller
             return redirect()->intended('dashboard');
 
         } else {
-            
-            return redirect()->back()->with('usuario ou senha ínvalidas');
+
+            return redirect()->back()->with('erro', 'usuário ou senha invalidos !');
         }
     }
 
