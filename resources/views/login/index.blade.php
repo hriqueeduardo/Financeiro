@@ -25,6 +25,12 @@
                                         </div>
                                     @endif
 
+                                    @if ($mensagemSucesso = Session::get('sucesso'))
+                                    <div class="alert alert-success">
+                                        {{ $mensagemSucesso }}
+                                    </div>
+                                    @endif
+
                                     <form action=" {{ route('login.auth') }} " method="POST">
                                         @csrf
                                         <div class="form-group">

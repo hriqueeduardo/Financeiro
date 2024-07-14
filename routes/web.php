@@ -23,5 +23,5 @@ Route::controller(LoginController::class)->group( function () {
 
 Route::controller(RegisterController::class)->group(function (){
     Route::get('/cadastre-se', 'index')->name('register.index');
-    Route::get('/store', 'store')->name('register.store');
+    Route::post('/cadastre-se/salvar', 'store')->name('register.store');
 });
