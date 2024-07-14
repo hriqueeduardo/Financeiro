@@ -7,10 +7,6 @@ body {
     background-color:#d3d3d3;
 }
 
-.aa {
-    color: blue;
-}
-
 #botao-cadastrar {
     float: right;
 }
@@ -18,3 +14,7 @@ body {
 #faca-login {
     text-align: center;
 }
+
+.sublinhado-link {  		
+    text-decoration: none;    	
+} 
