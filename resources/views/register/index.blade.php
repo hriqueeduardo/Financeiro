@@ -18,13 +18,23 @@
                                         <img src="{{ asset('img/cifra.png') }}" style="width: 185px;" alt="logo">
                                         <h4 class="mt-1 mb-5 pb-1">Crie sua conta</h4>
                                     </div>
+
+                                    @if ($errors->any())
+                                    <div class="alert alert-danger">
+                                        <ul>
+                                            @foreach ($errors->all() as $erro)
+                                                <li>{{ $erro }}</li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                    @endif
                                 
                                     <form action=" {{ route('register.store') }} " method="POST">
                                         @csrf
                                         <div class="form-group">
                                             <label for="usuario" class="mb-2">Nome de usuário</label>
                                             <input type="text" class="form-control mb-3" id="usuario"
-                                                name="usuario" placeholder="Digite o usuário" required>
+                                                name="usuario" placeholder="Digite o usuário" required value="{{ old('usuario') }}">
                                         </div>
 
                                         <div class="form-group">
@@ -34,9 +44,9 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="confirma-senha" class="mb-2">Confirme sua senha</label>
-                                            <input type="password" class="form-control mb-3" id="confirma-senha"
-                                                name="confirma-senha" placeholder="Senha" required>
+                                            <label for="password_confirmation" class="mb-2">Confirme sua senha</label>
+                                            <input type="password" class="form-control mb-3" id="password_confirmation"
+                                                name="password_confirmation" placeholder="Senha" required>
                                         </div>
 
                                         <div class="text-center pt-1 mb-5 pb-1">
