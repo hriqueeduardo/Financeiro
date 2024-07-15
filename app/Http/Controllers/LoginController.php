@@ -13,7 +13,7 @@ class LoginController extends Controller
 
         $credenciais = $request->validate([
             'usuario' => ['required'],
-            'senha' => ['required']
+            'password' => ['required']
         ]);
 
 

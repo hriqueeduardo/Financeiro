@@ -33,19 +33,19 @@
                                         @csrf
                                         <div class="form-group">
                                             <label for="usuario" class="mb-2">Nome de usuário</label>
-                                            <input type="text" class="form-control mb-3" id="usuario"
+                                            <input type="text" class="form-control mb-2" id="usuario"
                                                 name="usuario" placeholder="Digite o usuário" required value="{{ old('usuario') }}">
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="senha" class="mb-2">Senha</label>
-                                            <input type="password" class="form-control mb-3" id="senha"
-                                                name="senha" placeholder="Senha" required>
+                                            <label for="password" class="mb-2">Senha</label>
+                                            <input type="password" class="form-control mb-2" id="password"
+                                                name="password" placeholder="Senha" required>
                                         </div>
 
                                         <div class="form-group">
                                             <label for="password_confirmation" class="mb-2">Confirme sua senha</label>
-                                            <input type="password" class="form-control mb-3" id="password_confirmation"
+                                            <input type="password" class="form-control mb-2" id="password_confirmation"
                                                 name="password_confirmation" placeholder="Senha" required>
                                         </div>
 

@@ -40,9 +40,9 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="senha" class="mb-2">Senha</label>
-                                            <input type="password" class="form-control mb-3" id="senha"
-                                                name="senha" placeholder="Senha" required>
+                                            <label for="password" class="mb-2">Senha</label>
+                                            <input type="password" class="form-control mb-3" id="senpasswordha"
+                                                name="password" placeholder="Senha" required>
                                         </div>
 
                                         <div class="text-center pt-1 mb-5 pb-1">

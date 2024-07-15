@@ -19,17 +19,18 @@ class RegisterController extends Controller
 
         $request->validate([
             'usuario' => 'required',
-            'senha' => 'required | confirmed | min:8',
+            'password' => 'required | confirmed | min:8',
+            'password_confirmation' => 'required | min:8',
         ]);
 
         $user = $request->input('usuario');
-        $password = $request->input('senha');
+        $password = $request->input('password');
 
         $hashedPassword = Hash::make($password);
 
         $usuario = new Usuario();
         $usuario->usuario = $user;
-        $usuario->senha = $hashedPassword;
+        $usuario->password = $hashedPassword;
         $usuario->save();
 
         return to_route('login.index')->with('sucesso', "Cadastro realizado com sucesso, use suas credenciais para realizar o acesso.");

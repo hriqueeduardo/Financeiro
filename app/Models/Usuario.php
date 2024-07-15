@@ -12,5 +12,5 @@ class Usuario extends Authenticatable
 
     public $timestamps = false;
 
-    protected $fillable = ['usuario', 'senha'];
+    protected $fillable = ['usuario', 'password'];
 }
