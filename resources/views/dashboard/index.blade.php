@@ -3,7 +3,8 @@
     <header class="bg-dark">
         <div>
             <h2 id="titulo">Controle Financeiro</h2>
-            <span id="span-usuario">Bem vindo {{ Auth::user()->usuario }} <a href="{{ route('logout.destroy') }}" id="btn-sair" class="btn btn-danger">Sair</a> </span>
+            <span id="span-usuario">Bem vindo {{ Auth::user()->usuario }} <a href="{{ route('logout.destroy') }}"
+                    id="btn-sair" class="btn btn-danger">Sair</a> </span>
         </div>
     </header>
 
@@ -76,11 +77,9 @@
                                 <td class="valor-tabela" id="valor-tabela"></td>
                                 <td class="situacoes" style="" id="td-situacao"> </td>
                                 <td>
-                                    <a class="btn btn-outline-success"
-                                        href="">Pago</a>
+                                    <a class="btn btn-outline-success" href="">Pago</a>
                                     <button id="" style="margin: 0 5px 0 5px;" type="button"
-                                        class="btn btn-outline-primary" data-toggle="modal"
-                                        data-target="#modalAlterar"
+                                        class="btn btn-outline-primary" data-toggle="modal" data-target="#modalAlterar"
                                         onclick="">Alterar</button>
                                     <button id="btn-excluir" class="btn btn-outline-danger"
                                         data-id="">Excluir</button>
@@ -187,10 +186,10 @@
                             </div>
                         </div>
                         <div style="margin-top: 20px;" class="modal-footer">
-                        </div>
-                        <div style="float: right;">
-                            <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
-                            <button type="submit" class="btn btn-success">Salvar</button>
+                            <div style="float: right;">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                                <button type="submit" class="btn btn-success">Salvar</button>
+                            </div>
                         </div>
                     </form>
                 </div>

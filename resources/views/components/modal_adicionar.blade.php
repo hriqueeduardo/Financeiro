@@ -1,22 +1,21 @@
 @vite(['resources/css/modal-adicionar.css'])
 
 <!-- modal de adicionar contas -->
-<div class="modal fade bd-example-modal-lg" id="modalAdicionar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
+<div class="modal modal-lg" id="modalAdicionar" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header bg-primary">
                 <h5 class="modal-title" id="exampleModalLabel">Adicionar uma conta</h5>
-                <button type="button" class="close d-flex" data-bs-dismiss="modal" aria-bs-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-bs-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                <form action="inserir.php" method="post">
-                    <div class="form-row">
-                        <div class="form-group col-md-12">
+                <form action="" method="POST">
+                    <div class="row">
+                        <div class="form-group col-md-3">
                             <label for="descricao">Descrição</label>
-                            <select id="descricao" name="descricao" class="form-control" onchange="">
+                            <select id="descricao" name="descricao" class="form-control mb-3" onchange="">
                                 <option selected>Selecione...</option>
                                 <option>Cartão Nubank</option>
                                 <option>Cartão Neon</option>
@@ -31,36 +30,32 @@
                                 <option value="10">Outros</option>
                             </select>
                         </div>
+                        <div class="form-group col-md-9">
+                            <label for="outros">Outros</label>
+                            <input type="text" class="form-control mb-3" id="outros" name="outros"
+                                placeholder="Descrição" disabled>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="outros">Outros</label>
-                        <input type="text" class="form-control" id="outros" name="outros" placeholder="Descrição"
-                            disabled>
-                    </div>
-
-
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
+                    <div class="row">
+                        <div class="form-group col-md-3">
                             <div class="form-group">
                                 <label for="valor">Valor</label>
-                                <input type="text" class="form-control" id="valor" name="valor"
+                                <input type="text" class="form-control mb-3" id="valor" name="valor"
                                     placeholder="R$ 0,00" required>
                             </div>
                         </div>
-                        <div class="form-group col-md-6">
+                        <div class="form-group col-md-4">
                             <label for="situacao">Situação</label>
-                            <select id="situacao" name="situacao" class="form-control">
+                            <select id="situacao" name="situacao" class="form-control mb-3">
                                 <option selected>Selecione...</option>
                                 <option>Em aberto</option>
                                 <option>Pago</option>
                             </select>
                         </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
+                        <div class="form-group col-md-5">
                             <label for="vencimento">Data Vencimento</label>
-                            <div class="input-group">
-                                <span class="input-group-text" id="basic-addon1">
+                            <div class="input-group date">
+                                <span class="input-group-text mb-3" id="basic-addon1">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                         fill="currentColor" class="bi bi-calendar-date" viewBox="0 0 16 16">
                                         <path
@@ -71,16 +66,22 @@
                                         </path>
                                     </svg>
                                 </span>
-                                <input type="text" class="form-control" id="vencimento" name="vencimento">
+                                <input type="date" class="form-control mb-3" id="vencimento" name="vencimento">
                             </div>
                         </div>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                        <button style="margin-right: 5px;" type="submit" class="btn btn-primary" data-toggle="modal"
-                            data-target="#cadastrado">Salvar</button>
+                    <div class="row">
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Descrição detalhada</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
                     </div>
                 </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                <button style="margin-right: 5px;" type="submit" class="btn btn-primary" data-bs-toggle="modal"
+                    data-bs-target="#cadastrado">Salvar</button>
             </div>
         </div>
     </div>
