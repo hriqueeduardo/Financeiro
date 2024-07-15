@@ -51,7 +51,7 @@
 
                                         <div class="text-center pt-1 mb-5 pb-1">
                                             <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3 col-12" type="submit">Cadastre-se</button>
-                                            <a class="text-muted sublinhado-link" href="{{ route('login.index') }}">Ja tem uma conta ?  faça login</a>
+                                            <a class="text-muted sublinhado-link" href="{{ route('login') }}">Ja tem uma conta ?  faça login</a>
                                         </div>
 
                                     </form>
