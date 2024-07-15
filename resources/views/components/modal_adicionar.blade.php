@@ -5,17 +5,16 @@
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header bg-primary">
-                <h5 class="modal-title" id="exampleModalLabel">Adicionar uma conta</h5>
-                <button type="button" class="close" data-bs-dismiss="modal" aria-bs-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+                <h5 class="modal-title" id="titulo-modal">Adicionar uma conta</h5>
+                <button type="button" class="btn-close bg-light-subtle" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <form action="" method="POST">
                     <div class="row">
                         <div class="form-group col-md-3">
                             <label for="descricao">Descrição</label>
-                            <select id="descricao" name="descricao" class="form-control mb-3" onchange="">
+                            <select id="descricao" name="descricao" class="form-select mb-3" onchange="">
                                 <option selected>Selecione...</option>
                                 <option>Cartão Nubank</option>
                                 <option>Cartão Neon</option>
@@ -23,11 +22,11 @@
                                 <option>Cartão Santander</option>
                                 <option>Cartão Magalu</option>
                                 <option>Cartão Renner</option>
-                                <option>Cartão Avenida</option>
-                                <option>Cartão Havan</option>
-                                <option>Cartão Vuon</option>
-                                <option>Claro</option>
-                                <option value="10">Outros</option>
+                                <opt ion>Cartão Avenida</option>
+                                    <option>Cartão Havan</option>
+                                    <option>Cartão Vuon</option>
+                                    <option>Claro</option>
+                                    <option value="10">Outros</option>
                             </select>
                         </div>
                         <div class="form-group col-md-9">
@@ -45,14 +44,6 @@
                             </div>
                         </div>
                         <div class="form-group col-md-4">
-                            <label for="situacao">Situação</label>
-                            <select id="situacao" name="situacao" class="form-control mb-3">
-                                <option selected>Selecione...</option>
-                                <option>Em aberto</option>
-                                <option>Pago</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-md-5">
                             <label for="vencimento">Data Vencimento</label>
                             <div class="input-group date">
                                 <span class="input-group-text mb-3" id="basic-addon1">
@@ -69,6 +60,12 @@
                                 <input type="date" class="form-control mb-3" id="vencimento" name="vencimento">
                             </div>
                         </div>
+                        <div class="form-group col-md-5 mt-4">              
+                            <input type="radio" class="btn-check mt-5" name="options-outlined" id="danger-outlined" autocomplete="off">
+                            <label style="margin-right: 10px;" class="btn btn-outline-danger" for="danger-outlined">Em aberto</label>
+                            <input type="radio" class="btn-check" name="options-outlined" id="success-outlined" autocomplete="off" checked>
+                            <label class="btn btn-outline-success" for="success-outlined">Pago</label>
+                        </div>
                     </div>
                     <div class="row">
                         <div class="form-group">
@@ -80,7 +77,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                <button style="margin-right: 5px;" type="submit" class="btn btn-primary" data-bs-toggle="modal"
+                <button type="submit" class="btn btn-primary" data-bs-toggle="modal"
                     data-bs-target="#cadastrado">Salvar</button>
             </div>
         </div>
