@@ -1,0 +1,65 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
+.cor-verde {
+    background-color: #58af9c;
+}
+
+body {
+    background-color:#d3d3d3;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+strong {
+    font-family: Andale Mono, monospace;
+}
+
+#titulo {
+    color: #ffffff;
+    font-family: Andale Mono, monospace;
+    margin: 0;
+    line-height: 80px;
+    display: inline-block;
+}
+
+.div {
+    display: inline-block;
+}
+
+#div-tabela{
+    width: calc(80% - 1%);
+    margin-right: 5px;
+}
+
+#div-totais{
+    width: calc(20% - 1%);
+    margin: 0 auto;
+}
+
+
+#botao-adicionar {
+    width: 20rem; 
+    float: right;
+    margin-right: 50px;
+}
+
+#span-usuario{
+    color: #ffffff;
+    font-size: 12pt;
+    float: right;
+    line-height: 80px;
+}
+
+#btn-sair {
+    margin: auto 30px;
+    width: 4rem;
+}
+
+.titulo{
+    margin-bottom: 20px;
+}
