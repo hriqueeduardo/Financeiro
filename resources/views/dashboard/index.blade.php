@@ -76,16 +76,25 @@
                                 @foreach ($contas as $conta)
                                 <tr id="dados">
                                     <th scope="row"> </th>
-                                    <td>{{ $conta->descricao }}</td>
+
+                                    <!-- verifica se é um descrição do selected ou outro e exibe  -->
+                                    @if ($conta->descricao === "10")
+                                        @php($descricao = $conta->descricao_outro)
+                                    @else
+                                    @php($descricao = $conta->descricao)
+                                    @endif
+
+
+                                    <td>{{ $descricao }}</td>
                                     <td class="valor-tabela mascaraValor" id="valor-tabela">{{ 'R$ ' . number_format($conta->valor, 2, ',', '.') }}</td>
 
                                     <!-- verifica a situção e deixa Em aberto/Pago e muda com conforme o tipo -->
                                     @if ($conta->situacao === 0)
-                                    @php($situacao = "Em aberto")
-                                    @php($color = "#d9534f")
+                                        @php($situacao = "Em aberto")
+                                        @php($color = "#d9534f")
                                     @else
-                                    @php($situacao = "Pago")
-                                    @php($color = "#58af9c")
+                                        @php($situacao = "Pago")
+                                        @php($color = "#58af9c")
                                     @endif
 
                                     <td class="situacoes" style="color:{{ $color }}" id="situacao-tabela">{{ $situacao }}</td>

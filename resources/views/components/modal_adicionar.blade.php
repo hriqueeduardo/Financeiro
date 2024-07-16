@@ -15,7 +15,7 @@
                     <div class="row">
                         <div class="form-group col-md-3">
                             <label for="descricao">Descrição</label>
-                            <select id="descricao" name="descricao" class="form-select mb-3" onchange="">
+                            <select id="descricao" name="descricao" class="form-select mb-3" onchange="Verifica(this.value)">
                                 <option selected>Selecione...</option>
                                 <option>Cartão Nubank</option>
                                 <option>Cartão Neon</option>

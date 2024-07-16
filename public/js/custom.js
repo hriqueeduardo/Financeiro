@@ -19,3 +19,20 @@ inputValor.addEventListener('input', function () {
     this.value = "R$ " + formattedValor;
 
 });
+
+
+// Função para habilitar o campo text Descrição caso o selected for do tipo Outros.
+function Verifica(value) {
+
+    var input = document.getElementById("descricao_outro");
+
+    if (value == 10) {
+
+        input.disabled = false;
+
+    } else {
+
+        input.disabled = true;
+    }
+
+};
