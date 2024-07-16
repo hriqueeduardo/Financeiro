@@ -33,6 +33,6 @@ class RegisterController extends Controller
         $usuario->password = $hashedPassword;
         $usuario->save();
 
-        return to_route('login.index')->with('sucesso', "Cadastro realizado com sucesso, use suas credenciais para realizar o acesso.");
+        return to_route('login.auth')->with('sucesso', "Cadastro realizado com sucesso, use suas credenciais para realizar o acesso.");
     }
 }

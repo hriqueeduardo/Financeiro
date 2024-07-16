@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('contas', function (Blueprint $table) {
             $table->id();
-            $table->unsignedTinyInteger('descricao');
+            $table->string('descricao', 255);
             $table->string('descricao_outro', 255)->nullable();
             $table->decimal('valor', 8,2);
             $table->date('vencimento');

@@ -17,16 +17,16 @@
                             <label for="descricao">Descrição</label>
                             <select id="descricao" name="descricao" class="form-select mb-3" onchange="">
                                 <option selected>Selecione...</option>
-                                <option value="0">Cartão Nubank</option>
-                                <option value="1">Cartão Neon</option>
-                                <option value="2">Cartão PicPay</option>
-                                <option value="3">Cartão Santander</option>
-                                <option value="4">Cartão Magalu</option>
-                                <option value="5">Cartão Renner</option>
-                                <option value="6">Cartão Avenida</option>
-                                <option value="7">Cartão Havan</option>
-                                <option value="8">Cartão Vuon</option>
-                                <option value="9">Claro</option>
+                                <option>Cartão Nubank</option>
+                                <option>Cartão Neon</option>
+                                <option>Cartão PicPay</option>
+                                <option>Cartão Santander</option>
+                                <option>Cartão Magalu</option>
+                                <option>Cartão Renner</option>
+                                <option>Cartão Avenida</option>
+                                <option>Cartão Havan</option>
+                                <option>Cartão Vuon</option>
+                                <option>Claro</option>
                                 <option value="10">Outros</option>
                             </select>
                         </div>

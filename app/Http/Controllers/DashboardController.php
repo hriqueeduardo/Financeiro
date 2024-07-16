@@ -10,7 +10,9 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        return view('dashboard.index');
+        $contas = Conta::all();
+
+        return view('dashboard.index')->with('contas', $contas);
     }
 
     public function store(Request $request) 

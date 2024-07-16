@@ -1,8 +1,10 @@
+
 // Receber o seletor do campo valor
 let inputValor = document.getElementById('valor');
 
+
 // Aguardar o usuário digitar valor no campo
-inputValor.addEventListener('input', function(){
+inputValor.addEventListener('input', function () {
 
     // Obter o valor atual removendo qualquer caractere que não seja número
     let valueValor = this.value.replace(/[^\d]/g, '');
@@ -15,5 +17,5 @@ inputValor.addEventListener('input', function(){
 
     // Atualizar o valor do campo
     this.value = "R$ " + formattedValor;
-    
+
 });

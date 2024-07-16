@@ -73,11 +73,22 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach ($contas as $conta)
                                 <tr id="dados">
                                     <th scope="row"> </th>
-                                    <td> </td>
-                                    <td class="valor-tabela" id="valor-tabela"></td>
-                                    <td class="situacoes" style="" id="td-situacao"> </td>
+                                    <td>{{ $conta->descricao }}</td>
+                                    <td class="valor-tabela mascaraValor" id="valor-tabela">{{ 'R$ ' . number_format($conta->valor, 2, ',', '.') }}</td>
+
+                                    <!-- verifica a situção e deixa Em aberto/Pago e muda com conforme o tipo -->
+                                    @if ($conta->situacao === 0)
+                                    @php($situacao = "Em aberto")
+                                    @php($color = "#d9534f")
+                                    @else
+                                    @php($situacao = "Pago")
+                                    @php($color = "#58af9c")
+                                    @endif
+
+                                    <td class="situacoes" style="color:{{ $color }}" id="situacao-tabela">{{ $situacao }}</td>
                                     <td>
                                         <a class="btn btn-outline-success" href="">Pago</a>
                                         <button id="" style="margin: 0 5px 0 5px;" type="button"
@@ -87,6 +98,7 @@
                                             data-id="">Excluir</button>
                                     </td>
                                 </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
@@ -153,5 +165,6 @@
             </div>
         </div>
     </div>
+    <script src="{{ asset('js/custom.js')}}"></script>
 
 </x-layout>
