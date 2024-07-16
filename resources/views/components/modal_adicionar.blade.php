@@ -39,8 +39,7 @@
                         <div class="form-group col-md-3">
                             <div class="form-group">
                                 <label for="valor">Valor</label>
-                                <input type="text" class="form-control mb-3" id="valor" name="valor"
-                                    placeholder="R$ 0,00" required>
+                                <input type="text" id="valor" name="valor" class="form-control" required placeholder="R$ 0,00" />
                             </div>
                         </div>
                         <div class="form-group col-md-4">
@@ -83,3 +82,5 @@
         </div>
     </div>
 </div>
+
+<script src="{{ asset('js/custom.js')}}"></script>
