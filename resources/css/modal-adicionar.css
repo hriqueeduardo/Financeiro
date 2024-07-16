@@ -1,3 +1,11 @@
 #titulo-modal {
     color: #ffffff;
 }
+
+label {
+    margin-bottom: 4px;
+}
+
+#situacao {
+    margin-top: 27px;
+}

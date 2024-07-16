@@ -10,28 +10,29 @@
                     aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form action="" method="POST">
+                <form action="{{ route('dashboard.store') }}" method="POST">
+                    @csrf
                     <div class="row">
                         <div class="form-group col-md-3">
                             <label for="descricao">Descrição</label>
                             <select id="descricao" name="descricao" class="form-select mb-3" onchange="">
                                 <option selected>Selecione...</option>
-                                <option>Cartão Nubank</option>
-                                <option>Cartão Neon</option>
-                                <option>Cartão PicPay</option>
-                                <option>Cartão Santander</option>
-                                <option>Cartão Magalu</option>
-                                <option>Cartão Renner</option>
-                                <opt ion>Cartão Avenida</option>
-                                    <option>Cartão Havan</option>
-                                    <option>Cartão Vuon</option>
-                                    <option>Claro</option>
-                                    <option value="10">Outros</option>
+                                <option value="0">Cartão Nubank</option>
+                                <option value="1">Cartão Neon</option>
+                                <option value="2">Cartão PicPay</option>
+                                <option value="3">Cartão Santander</option>
+                                <option value="4">Cartão Magalu</option>
+                                <option value="5">Cartão Renner</option>
+                                <option value="6">Cartão Avenida</option>
+                                <option value="7">Cartão Havan</option>
+                                <option value="8">Cartão Vuon</option>
+                                <option value="9">Claro</option>
+                                <option value="10">Outros</option>
                             </select>
                         </div>
                         <div class="form-group col-md-9">
-                            <label for="outros">Outros</label>
-                            <input type="text" class="form-control mb-3" id="outros" name="outros"
+                            <label for="descricao_outro">Outros</label>
+                            <input type="text" class="form-control mb-3" id="descricao_outro" name="descricao_outro"
                                 placeholder="Descrição" disabled>
                         </div>
                     </div>
@@ -59,25 +60,24 @@
                                 <input type="date" class="form-control mb-3" id="vencimento" name="vencimento">
                             </div>
                         </div>
-                        <div class="form-group col-md-5 mt-4">              
-                            <input type="radio" class="btn-check mt-5" name="options-outlined" id="danger-outlined" autocomplete="off">
+                        <div id="situacao" class="form-group col-md-5">              
+                            <input type="radio" class="btn-check mt-5" name="situacao" id="danger-outlined" autocomplete="off" value="0" checked>
                             <label style="margin-right: 10px;" class="btn btn-outline-danger" for="danger-outlined">Em aberto</label>
-                            <input type="radio" class="btn-check" name="options-outlined" id="success-outlined" autocomplete="off" checked>
+                            <input type="radio" class="btn-check" name="situacao" id="success-outlined" autocomplete="off" value="1">
                             <label class="btn btn-outline-success" for="success-outlined">Pago</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="form-group">
-                            <label for="exampleFormControlTextarea1">Descrição detalhada</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <label for="descricao_detalhada">Descrição detalhada</label>
+                            <textarea class="form-control" name="descricao_detalhada" id="descricao_detalhada" rows="3"></textarea>
                         </div>
                     </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        <button type="submit" class="btn btn-primary">Salvar</button>
+                    </div>
                 </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                <button type="submit" class="btn btn-primary" data-bs-toggle="modal"
-                    data-bs-target="#cadastrado">Salvar</button>
             </div>
         </div>
     </div>

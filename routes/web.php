@@ -31,8 +31,5 @@ Route::controller(RegisterController::class)->group(function (){
 });
 
 
-Route::controller(DashboardController::class)->group( function () {
-
-    Route::get('/dashboard', 'index')->middleware('auth')->name('dashboard.index');
-
-});
+Route::resource('/dashboard', DashboardController::class)
+      ->only(['index', 'store'])->middleware('auth');

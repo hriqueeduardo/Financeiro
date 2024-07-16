@@ -23,7 +23,7 @@
                     <div class="form-group col-md-2">
                         <div class="input-group mb-5">
                             <div class="input-group-prepend">
-                                <label class="input-group-text" for="mes">Mês</label>
+                                <span class="input-group-text" id="span-mes">Mês</span>
                             </div>
                             <select class="form-select" id="mes">
                                 <option selected>Selecione...</option>
