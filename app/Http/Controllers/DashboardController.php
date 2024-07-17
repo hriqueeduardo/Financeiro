@@ -49,4 +49,13 @@ class DashboardController extends Controller
 
         return to_route('dashboard.index');
     }
+
+    public function situacao($id)
+    {
+
+        Conta::where('id', $id)->update(['situacao' => 1]);
+
+        return to_route('dashboard.index');
+
+    }
 }

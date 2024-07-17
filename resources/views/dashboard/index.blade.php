@@ -98,7 +98,7 @@
                                         <td class="situacoes" style="color:{{ $color }}" id="situacao-tabela">
                                             {{ $situacao }}</td>
                                         <td>
-                                            <a class="btn btn-outline-success" href="">Pago</a>
+                                            <a class="btn btn-outline-success" href="{{ route('dashboard.situacao', $conta->id)}}">Pago</a>
 
                                             <a href="#modalAlterar-{{ $conta->id }}" class="btn btn-outline-primary"
                                                 data-bs-toggle="modal"
