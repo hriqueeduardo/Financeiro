@@ -22,8 +22,9 @@ inputValor.addEventListener('input', function () {
 
 
 // Função para habilitar o campo text Descrição caso o selected for do tipo Outros.
-function Verifica(value) {
+function VerificaAdicionar(value) {
 
+    // adicionar
     var input = document.getElementById("descricao_outro");
 
     if (value == 10) {
@@ -33,6 +34,25 @@ function Verifica(value) {
     } else {
 
         input.disabled = true;
+    }
+
+};
+
+
+// Função para habilitar o campo text Descrição caso o selected for do tipo Outros.
+function VerificaAlterar(value) {
+
+    // alterar
+    var inputAlterar = document.getElementById("alterar_descricao_outro");
+
+    if (value == 10) {
+
+        inputAlterar.disabled = false;
+
+    } else {
+
+        inputAlterar.disabled = true;
+        inputAlterar.val('');
     }
 
 };

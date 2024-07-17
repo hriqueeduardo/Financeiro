@@ -1,11 +1,14 @@
-#titulo-modal {
-    color: #ffffff;
-}
-
 label {
     margin-bottom: 4px;
+    display: flex;
 }
 
 #situacao {
     margin-top: 27px;
+}
+
+
+#alterar_situacao {
+    margin-top: 27px;
+    float: right;
 }

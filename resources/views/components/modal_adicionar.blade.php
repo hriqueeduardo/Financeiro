@@ -5,18 +5,17 @@
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header bg-primary">
-                <h5 class="modal-title" id="titulo-modal">Adicionar uma conta</h5>
+                <h5 class="modal-title text-white">Adicionar uma conta</h5>
                 <button type="button" class="btn-close bg-light-subtle" data-bs-dismiss="modal"
                     aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <form action="{{ route('dashboard.store') }}" method="POST">
                     @csrf
-                    <div class="row">
+                    <div class="row mb-3">
                         <div class="form-group col-md-3">
                             <label for="descricao">Descrição</label>
-                            <select id="descricao" name="descricao" class="form-select mb-3" onchange="Verifica(this.value)">
-                                <option selected>Selecione...</option>
+                            <select id="descricao" name="descricao" class="form-select" onchange="VerificaAdicionar(this.value)">
                                 <option>Cartão Nubank</option>
                                 <option>Cartão Neon</option>
                                 <option>Cartão PicPay</option>
@@ -32,11 +31,11 @@
                         </div>
                         <div class="form-group col-md-9">
                             <label for="descricao_outro">Outros</label>
-                            <input type="text" class="form-control mb-3" id="descricao_outro" name="descricao_outro"
+                            <input type="text" class="form-control" id="descricao_outro" name="descricao_outro"
                                 placeholder="Descrição" disabled>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row mb-3">
                         <div class="form-group col-md-3">
                             <div class="form-group">
                                 <label for="valor">Valor</label>
@@ -46,7 +45,7 @@
                         <div class="form-group col-md-4">
                             <label for="vencimento">Data Vencimento</label>
                             <div class="input-group date">
-                                <span class="input-group-text mb-3" id="basic-addon1">
+                                <span class="input-group-text" id="basic-addon1">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                         fill="currentColor" class="bi bi-calendar-date" viewBox="0 0 16 16">
                                         <path
@@ -57,17 +56,17 @@
                                         </path>
                                     </svg>
                                 </span>
-                                <input type="date" class="form-control mb-3" id="vencimento" name="vencimento">
+                                <input type="date" class="form-control" id="vencimento" name="vencimento" required>
                             </div>
                         </div>
                         <div id="situacao" class="form-group col-md-5">              
-                            <input type="radio" class="btn-check mt-5" name="situacao" id="danger-outlined" autocomplete="off" value="0" checked>
-                            <label style="margin-right: 10px;" class="btn btn-outline-danger" for="danger-outlined">Em aberto</label>
+                            <input type="radio" class="btn-check" name="situacao" id="danger-outlined" autocomplete="off" value="0" checked>
+                            <label class="btn btn-outline-danger" for="danger-outlined" style="margin-right: 10px;">Em aberto</label>
                             <input type="radio" class="btn-check" name="situacao" id="success-outlined" autocomplete="off" value="1">
                             <label class="btn btn-outline-success" for="success-outlined">Pago</label>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row mb-5">
                         <div class="form-group">
                             <label for="descricao_detalhada">Descrição detalhada</label>
                             <textarea class="form-control" name="descricao_detalhada" id="descricao_detalhada" rows="3"></textarea>
