@@ -40,4 +40,13 @@ class DashboardController extends Controller
 
         return to_route('dashboard.index');
     }
+
+    public function destroy($id)
+    {
+
+        $conta = Conta::find($id);
+        $conta->delete();
+
+        return to_route('dashboard.index');
+    }
 }
