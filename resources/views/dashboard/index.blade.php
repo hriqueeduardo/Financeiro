@@ -1,3 +1,5 @@
+@vite(['resources/css/modal.css'])
+
 <x-layout title="Dashboard">
 
     <header class="bg-dark">
@@ -49,7 +51,7 @@
                         </div>
                     </div>
                     <div class="form-group col-md-1">
-                        <button type="button" class="btn btn-primary col-sm-12">Filtrar</button>
+                        <button type="button" class="btn btn-outline-primary col-sm-12">Filtrar</button>
                     </div>
                     <div class="form-group col-md-7">
                         <button id="botao-adicionar" type="button" class="btn btn-success" data-bs-toggle="modal"
@@ -98,7 +100,13 @@
                                         <td class="situacoes" style="color:{{ $color }}" id="situacao-tabela">
                                             {{ $situacao }}</td>
                                         <td>
-                                            <a class="btn btn-outline-success" href="{{ route('dashboard.situacao', $conta->id)}}">Pago</a>
+                                            <a class="btn btn-outline-success" href="{{ route('dashboard.alterarParaPago', $conta->id)}}">Pago</a>
+
+                                            <a href="#modalVisualizar-{{ $conta->id }}" class="btn btn-outline-dark"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#modalVisualizar-{{ $conta->id }}"
+                                                style="margin: 0 5px 0 5px;">Detalhes</a>
+                                            @include('../components.modal_visualizar')
 
                                             <a href="#modalAlterar-{{ $conta->id }}" class="btn btn-outline-primary"
                                                 data-bs-toggle="modal"

@@ -34,4 +34,6 @@ Route::controller(RegisterController::class)->group(function (){
 Route::resource('/dashboard', DashboardController::class)
       ->only(['index', 'store', 'destroy'])->middleware('auth');
 
-Route::get('/dashboard/{id}', [DashboardController::class, 'situacao'])->name('dashboard.situacao');
+Route::get('/dashboard/{conta}', [DashboardController::class, 'alterarParaPago'])->name('dashboard.alterarParaPago');
+
+Route::get('/dashboard/show/{conta}', [DashboardController::class, 'show'])->name('dashboard.show');

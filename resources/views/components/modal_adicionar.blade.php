@@ -1,4 +1,3 @@
-@vite(['resources/css/modal-adicionar.css'])
 
 <!-- modal de adicionar contas -->
 <div class="modal modal-lg" id="modalAdicionar" tabindex="-1" role="dialog">

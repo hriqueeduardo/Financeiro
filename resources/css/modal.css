@@ -3,12 +3,21 @@ label {
     display: flex;
 }
 
+/* da modal de adicionar   */
 #situacao {
     margin-top: 27px;
 }
 
 
+/* da modal de alterar   */
 #alterar_situacao {
     margin-top: 27px;
     float: right;
+}
+
+/* da modal de visualizar   */
+.texto {
+
+    font-weight: bold;
+    margin-bottom: 5px;
 }

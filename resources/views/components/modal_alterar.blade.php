@@ -17,7 +17,7 @@
                         </div>
                         <div class="form-group col-md-3">
                             <label for="alterarDescricao">Descrição</label>
-                                <select id="alterarDescricao" name="alterarDescricao" class="form-select" onchange="VerificaAlterar(this.value)">
+                                <select id="alterarDescricao" name="alterarDescricao" class="form-select" onchange="VerificaAlterar(this.value)" value="{{ $conta->descricao }}">
                                     <option>Cartão Nubank</option>
                                     <option>Cartão Neon</option>
                                     <option>Cartão PicPay</option>
@@ -33,13 +33,13 @@
                         </div>
                         <div class="form-group col-md-7">
                             <label for="alterar_descricao_outro">Outros</label>
-                            <input type="text" class="form-control" id="alterar_descricao_outro" name="alterar_descricao_outro" placeholder="Descrição" disabled>
+                            <input type="text" class="form-control" id="alterar_descricao_outro" name="alterar_descricao_outro" placeholder="Descrição" disabled value="{{ $conta->descicao_outro }}">
                         </div>
                     </div>
                     <div class="row">
                         <div class="form-group col-md-3">
                             <label for="alterar_valor">Valor</label>
-                            <input type="text" class="form-control" id="alterar_valor" name="alterar_valor">
+                            <input type="text" class="form-control" id="alterar_valor" name="alterar_valor" @isset($valor) value="{{ $valor }}"@endisset>
                         </div>
                         <div class="form-group col-md-4">
                             <label for="alterar_vencimento">Data Vencimento</label>
@@ -52,7 +52,7 @@
                                         </path>
                                     </svg>
                                 </span>
-                            <input type="date" class="form-control mb-3" id="alterar_vencimento" name="alterar_vencimento" required>
+                            <input type="date" class="form-control mb-3" id="alterar_vencimento" name="alterar_vencimento" required value="{{ $conta->data_vencimento }}">
                             </div>
                         </div> 
                         <div id="alterar_situacao" class="form-group col-md-4">
@@ -65,7 +65,7 @@
                     <div class="row mb-5">
                         <div class="form-group col-md-12">
                             <label for="alterar_descricao_detalhada">Descrição detalhada</label>
-                            <textarea class="form-control" name="alterar_descricao_detalhada" id="alterar_descricao_detalhada" rows="3"></textarea>
+                            <textarea class="form-control" name="alterar_descricao_detalhada" id="alterar_descricao_detalhada" rows="3" value="{{ $conta->descricao_detalhada }}"></textarea>
                         </div>
                     </div>
                 </div>

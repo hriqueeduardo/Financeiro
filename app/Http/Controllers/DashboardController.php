@@ -50,7 +50,7 @@ class DashboardController extends Controller
         return to_route('dashboard.index');
     }
 
-    public function situacao($id)
+    public function alterarParaPago($id)
     {
 
         Conta::where('id', $id)->update(['situacao' => 1]);
@@ -58,4 +58,5 @@ class DashboardController extends Controller
         return to_route('dashboard.index');
 
     }
+
 }
